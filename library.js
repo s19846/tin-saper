@@ -43,7 +43,10 @@ class Library {
             }
             minefield[i] = row;
         }
-        return {minefield: minefield, mines: mines};
+        return {
+            minefield: minefield,
+            mines: mines
+        };
     }
 
     /**
@@ -52,7 +55,7 @@ class Library {
     generateMine() {
         // From 1 to 100
         let randNum = Math.floor(Math.random() * 100) + 1;
-        // 25% chance for a mine
+        // % chance for a mine
         return randNum <= 12;
     }
 
